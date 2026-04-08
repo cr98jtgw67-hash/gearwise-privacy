@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearWise - Smart Hiking Companion</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5016 50%, #1a472a 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 28px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        .download-section {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 32px;
+            border-radius: 14px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .download-btn.android {
+            background: #3ddc84;
+            color: #1a1a1a;
+        }
+        .download-btn.ios {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: default;
+            opacity: 0.7;
+        }
+        .download-btn.ios:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        .btn-icon {
+            font-size: 1.4em;
+        }
+        .version-info {
+            font-size: 0.85em;
+            opacity: 0.6;
+            margin-top: 4px;
+            margin-bottom: 24px;
+        }
+        .features {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 24px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .feature-card .icon {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        .feature-card h3 {
+            font-size: 0.95em;
+            margin-bottom: 6px;
+        }
+        .feature-card p {
+            font-size: 0.85em;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        .languages {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+        .install-note {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .install-note details {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: left;
+        }
+        .install-note summary {
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .install-note ol {
+            margin-left: 20px;
+            font-size: 0.9em;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85em;
+            opacity: 0.6;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8em; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero { padding: 40px 20px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">&#9968;</div>
+        <h1>GearWise</h1>
+        <p class="tagline">Your Smart Hiking Companion</p>
+    </div>
+
+    <div class="download-section">
+        <a href="https://expo.dev/artifacts/eas/tnVrVjjQsxoFzeRHp4iZve.apk" class="download-btn android">
+            <span class="btn-icon">&#9660;</span>
+            Download for Android (APK)
+        </a>
+        <div class="version-info">Version 1.0 &bull; Free &bull; No ads &bull; No in-app purchases</div>
+
+        <div class="download-btn ios">
+            <span class="btn-icon">&#63743;</span>
+            iOS &mdash; Coming Soon to the App Store
+        </div>
+    </div>
+
+    <div class="install-note">
+        <details>
+            <summary>How to install the APK on Android</summary>
+            <ol>
+                <li>Tap the download button above on your Android device</li>
+                <li>When prompted, allow your browser to install unknown apps</li>
+                <li>Open the downloaded APK file</li>
+                <li>Tap "Install" when prompted</li>
+                <li>Open GearWise and start exploring!</li>
+            </ol>
+        </details>
+    </div>
+
+    <div class="features">
+        <h2>Everything You Need on the Trail</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">&#9925;</div>
+                <h3>Real-Time Weather</h3>
+                <p>Hiking-specific forecasts and alerts powered by Open-Meteo</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128506;</div>
+                <h3>Trail Maps</h3>
+                <p>Interactive maps with navigation to keep you on track</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#127890;</div>
+                <h3>Smart Gear Lists</h3>
+                <p>Personalized gear checklists based on conditions and your trip</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#10084;</div>
+                <h3>Health Monitoring</h3>
+                <p>Track altitude, hydration, fatigue, and calories on the trail</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128680;</div>
+                <h3>Emergency SOS</h3>
+                <p>Send your GPS coordinates when you need help</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#127760;</div>
+                <h3>21 Languages</h3>
+                <p>Use GearWise in your preferred language, anywhere in the world</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="languages">
+        Available in English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Hindi, and 10 more languages
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GearWise &bull; Daniel Paul Goldsmith</p>
+        <p style="margin-top: 8px;">
+            <a href="https://cr98jtgw67-hash.github.io/gearwise-privacy/privacy-policy.html">Privacy Policy</a>
+            &bull;
+            <a href="mailto:gearwisecontactus@gmail.com">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>
