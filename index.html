@@ -1,49 +1,533 @@
-GearWise Privacy Policy
-Last updated: April 3, 2026
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearWise — Your Intelligent Hiking Companion</title>
+    <meta name="description" content="GearWise helps you plan smarter hikes, pack the right gear, navigate trails safely, and identify wildlife. Available on the App Store.">
+    <meta name="keywords" content="hiking app, trail planning, gear checklist, wildlife identification, first aid guide, night sky, hiking companion">
+    <meta name="author" content="Daniel Goldsmith">
+    <meta property="og:title" content="GearWise — Hike Smarter. Stay Safer.">
+    <meta property="og:description" content="Your intelligent hiking companion. Plan trips, track gear, identify wildlife, navigate trails, and stay safe in the backcountry.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cr98jtgw67-hash.github.io/gearwise-privacy/">
+    <link rel="icon" type="image/png" href="icon-512.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-Summary: GearWise is designed with your privacy as a priority. Your data stays on your device. We do not collect, store, or share your personal information. There are no accounts, no cloud sync, no tracking, and no ads.
+        :root {
+            --green-primary: #2E7D32;
+            --green-light: #4CAF50;
+            --green-dark: #1B5E20;
+            --green-accent: #34C759;
+            --dark-bg: #0A1A0E;
+            --card-bg: rgba(255,255,255,0.05);
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255,255,255,0.7);
+            --text-muted: rgba(255,255,255,0.4);
+        }
 
-On-Device Storage
-All your data — including trips, gear, health information, and preferences — is stored locally on your device using encrypted storage. Nothing is uploaded to external servers. You have full control over your data at all times.
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-No Accounts Required
-GearWise does not require you to create an account, log in, or use cloud sync. Your data stays on your device and is never shared with third parties.
+        /* ── Hero Section ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+            background: linear-gradient(170deg, #0A1A0E 0%, #143D1B 40%, #1B5E20 70%, #0A1A0E 100%);
+            position: relative;
+        }
 
-Location Data
-GearWise uses GPS location only during active hikes and trail searches to provide you with relevant information and navigation assistance. Location data is processed on your device and is never stored on remote servers or shared with any third party.
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(76,175,80,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
 
-You can revoke location access at any time through your device's Settings app.
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 20px 60px rgba(52,199,89,0.3);
+        }
 
-Health Data Protection
-If you choose to enter medical conditions or emergency contacts within GearWise, this information is stored locally on your device and encrypted. It is used solely to customize safety alerts for your outdoor activities. This health-related data is never transmitted, shared, or accessible to anyone other than you.
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
 
-Minimal Network Use
-GearWise connects to the internet only for the following purposes:
+        .hero-tagline {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: var(--green-accent);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
 
-Fetching weather forecasts for your planned activities
-Retrieving trail data and information
-Loading map tiles for navigation
-No personal data is included in these network requests. These connections are made solely to provide you with up-to-date environmental and trail information.
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
 
-No Tracking or Advertising
-GearWise does not use any analytics, tracking tools, or advertising frameworks. We do not collect usage data, behavioral data, or any form of telemetry. There are no ads in the app.
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-Data Collection Summary
-To be clear about what we do and do not collect:
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--green-accent);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 30px rgba(52,199,89,0.3);
+        }
 
-Personal information collected: None
-Data shared with third parties: None
-Data used for tracking: None
-Analytics or telemetry: None
-Children's Privacy
-GearWise does not knowingly collect any personal information from anyone, including children under the age of 13. Since no personal data is collected or transmitted, the app is safe for users of all ages.
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(52,199,89,0.4);
+        }
 
-Changes to This Policy
-If we update this privacy policy, we will post the revised version on this page with an updated date. Since GearWise does not collect email addresses or contact information, we encourage you to review this page periodically.
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.08);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: transform 0.2s, background 0.2s;
+        }
 
-Contact Us
-If you have any questions or concerns about this privacy policy or GearWise's data practices, please contact us at:
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.12);
+        }
 
-ausmith.daniel@gmail.com
+        .apple-icon {
+            width: 22px;
+            height: 22px;
+        }
 
-© 2026 GearWise. All rights reserved.
+        /* ── Stats Bar ── */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding: 40px 24px;
+            background: rgba(0,0,0,0.3);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--green-accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── Features Section ── */
+        .features {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 32px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(52,199,89,0.3);
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ── Languages Section ── */
+        .languages {
+            padding: 60px 24px;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .lang-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+
+        .lang-tag {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Download Section ── */
+        .download {
+            padding: 80px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #143D1B 100%);
+        }
+
+        .download-cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            width: 280px;
+        }
+
+        .download-card img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 16px;
+        }
+
+        .download-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .download-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            background: var(--dark-bg);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: var(--green-accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .hero { padding: 60px 20px; }
+            .hero-icon { width: 90px; height: 90px; border-radius: 22px; }
+            .stats-bar { gap: 24px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .download-cards { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<section class="hero">
+    <img src="icon-512.png" alt="GearWise App Icon" class="hero-icon">
+    <h1>GearWise</h1>
+    <p class="hero-tagline">Hike Smarter. Stay Safer.</p>
+    <p class="hero-sub">
+        Your intelligent hiking companion. Plan trips, pack the right gear, identify wildlife and plants, navigate trails with live weather, and stay safe in the backcountry.
+    </p>
+    <div class="hero-buttons">
+        <a href="https://apps.apple.com/us/app/gearwise-2e1736/id6761552884" class="btn-primary">
+            <svg class="apple-icon" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 21.99C7.78997 22.03 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            Download on App Store
+        </a>
+        <a href="#features" class="btn-secondary">
+            Explore Features
+        </a>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- STATS -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<section class="stats-bar">
+    <div class="stat">
+        <div class="stat-number">21</div>
+        <div class="stat-label">Languages</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Trail Features</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Free</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">iOS</div>
+        <div class="stat-label">Platform</div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- FEATURES -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<section class="features" id="features">
+    <h2 class="section-title">Everything You Need on the Trail</h2>
+    <p class="section-sub">GearWise combines trip planning, live tracking, wildlife identification, safety tools, and more into one powerful hiking companion.</p>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(52,199,89,0.15);">🗺️</div>
+            <h3>Trip Planning</h3>
+            <p>Search and discover trails, plan detailed trips with gear checklists, meal plans, and travel logistics. Know exactly what to pack for every hike.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(0,122,255,0.15);">📍</div>
+            <h3>Live Hike Tracking</h3>
+            <p>Real-time GPS tracking with interactive maps, weather overlays, elevation data, and group coordination. Always know where you are and what's coming.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(255,149,0,0.15);">🌿</div>
+            <h3>Plant &amp; Wildlife ID</h3>
+            <p>Identify plants, animals, insects, and fish using region-filtered databases with reference images from Wikimedia Commons. Know what's around you.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(255,59,48,0.15);">🏥</div>
+            <h3>First Aid Guide</h3>
+            <p>Emergency first aid instructions for snake bites, fractures, hypothermia, allergic reactions, and more. Critical info when you need it most — works offline.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(90,200,250,0.15);">🌤️</div>
+            <h3>Live Weather</h3>
+            <p>Real-time weather overlays with animated heat maps, wind trails, and precipitation tracking. Plan around the weather, not into it.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(175,130,255,0.15);">🌌</div>
+            <h3>Night Sky Guide</h3>
+            <p>Constellation guide showing what's visible tonight based on your location. Star maps, constellation details, and visibility ratings.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(255,204,0,0.15);">🎒</div>
+            <h3>Smart Gear Management</h3>
+            <p>Hierarchical gear organization, pack weight tracking, rental options, and verification checklists. Never forget essential gear again.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(52,199,89,0.15);">👥</div>
+            <h3>Group Tracking</h3>
+            <p>Keep your hiking group connected with real-time position sharing, guide scanning, and member tracking. Hike together, stay together.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(255,165,0,0.15);">📸</div>
+            <h3>Fun Photo Overlays</h3>
+            <p>Add Sasquatch, aliens, fairies, and other fun characters to your trail photos. Live AR filters and post-capture overlays — make memories worth sharing.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(0,122,255,0.15);">🏆</div>
+            <h3>Achievements</h3>
+            <p>Earn badges for milestones, wildlife sightings, and trail completions. Track your hiking journey and celebrate your progress.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(255,59,48,0.15);">🤖</div>
+            <h3>Trail Assistant AI</h3>
+            <p>Ask questions about trails, gear, safety, and more. Your smart hiking companion that knows the backcountry inside and out.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon" style="background: rgba(90,200,250,0.15);">📏</div>
+            <h3>Camera Measure Tools</h3>
+            <p>Estimate the height of trees and cliffs or measure distances across water and canyons using your phone's camera. Built-in trail measurement tools.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- LANGUAGES -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<section class="languages">
+    <h2 class="section-title">Available in 21 Languages</h2>
+    <p class="section-sub" style="margin-bottom: 0;">GearWise speaks your language, wherever you hike.</p>
+    <div class="lang-grid">
+        <span class="lang-tag">English</span>
+        <span class="lang-tag">Español</span>
+        <span class="lang-tag">Français</span>
+        <span class="lang-tag">Deutsch</span>
+        <span class="lang-tag">Italiano</span>
+        <span class="lang-tag">Português</span>
+        <span class="lang-tag">Nederlands</span>
+        <span class="lang-tag">Polski</span>
+        <span class="lang-tag">Русский</span>
+        <span class="lang-tag">日本語</span>
+        <span class="lang-tag">한국어</span>
+        <span class="lang-tag">中文 (简)</span>
+        <span class="lang-tag">中文 (繁)</span>
+        <span class="lang-tag">العربية</span>
+        <span class="lang-tag">हिन्दी</span>
+        <span class="lang-tag">বাংলা</span>
+        <span class="lang-tag">ไทย</span>
+        <span class="lang-tag">Tiếng Việt</span>
+        <span class="lang-tag">Bahasa Indonesia</span>
+        <span class="lang-tag">Türkçe</span>
+        <span class="lang-tag">Kiswahili</span>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- DOWNLOAD -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<section class="download" id="download">
+    <h2 class="section-title">Get GearWise</h2>
+    <p class="section-sub">Scan the QR code or tap the button to download. It's free.</p>
+
+    <div class="download-cards">
+        <div class="download-card">
+            <img src="GearWise_AppStore_QR.png" alt="App Store QR Code">
+            <h3>App Store</h3>
+            <p>Scan to download on iPhone or iPad</p>
+            <a href="https://apps.apple.com/us/app/gearwise-2e1736/id6761552884" class="btn-primary" style="margin-top: 16px; font-size: 0.95rem; padding: 12px 24px;">
+                <svg class="apple-icon" viewBox="0 0 24 24" fill="white" style="width:18px;height:18px;"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 21.99C7.78997 22.03 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                Download Free
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<footer>
+    <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/gearwise-2e1736/id6761552884">App Store</a>
+        <a href="mailto:gearwisecontactus@gmail.com">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <p>&copy; 2026 GearWise. Designed and developed by Daniel Goldsmith.</p>
+    <p>Made with care for the hiking community.</p>
+</footer>
+
+</body>
+</html>

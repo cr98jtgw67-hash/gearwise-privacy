@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearWise — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for GearWise, the intelligent hiking companion app.">
+    <link rel="icon" type="image/png" href="icon-512.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --green-primary: #2E7D32;
+            --green-light: #4CAF50;
+            --green-dark: #1B5E20;
+            --green-accent: #34C759;
+            --dark-bg: #0A1A0E;
+            --card-bg: rgba(255,255,255,0.05);
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255,255,255,0.7);
+            --text-muted: rgba(255,255,255,0.4);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: rgba(10,26,14,0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .header a {
+            color: var(--green-accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .header a:hover { opacity: 0.8; }
+
+        .header .logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        /* ── Content ── */
+        .content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .updated {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--green-accent);
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(52,199,89,0.15);
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            margin: 12px 0 20px 20px;
+        }
+
+        li {
+            font-size: 15px;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        a {
+            color: var(--green-accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: var(--green-accent);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            h2 { font-size: 18px; }
+            .content { padding: 32px 18px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ── -->
+    <div class="header">
+        <img src="icon-512.png" alt="GearWise" class="logo">
+        <a href="index.html">&#8592; Back to GearWise</a>
+    </div>
+
+    <!-- ── Content ── -->
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: April 6, 2026</p>
+
+        <h2>Introduction</h2>
+        <p>GearWise ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the GearWise mobile application.</p>
+
+        <h2>Information We Collect</h2>
+        <p>GearWise may collect the following types of information:</p>
+        <ul>
+            <li><strong>Location Data:</strong> GPS coordinates for live hike tracking, navigation, trail information, and safety alerts. Background location is used for route recording during active hikes.</li>
+            <li><strong>Health Data:</strong> With your permission, we may access health data (height, weight, date of birth, biological sex, menstrual cycle data) from Apple HealthKit or device sensors to personalize safety recommendations and detect potential health concerns during hikes.</li>
+            <li><strong>Camera and Photos:</strong> Camera access is used for wildlife and plant identification, fun photo overlays, and trip journals. Photos are stored locally on your device.</li>
+            <li><strong>Contacts:</strong> With your permission, we access your contacts to auto-fill personal information and emergency contact details.</li>
+            <li><strong>Microphone:</strong> Used for voice-powered Trail Assistant features and ambient sound detection for safety.</li>
+            <li><strong>Motion and Fitness:</strong> Accelerometer and motion data are used for fall detection to alert emergency contacts if you are injured on the trail.</li>
+            <li><strong>Biometric Authentication:</strong> Face ID or fingerprint is used locally on your device to protect your health data and trip information. Biometric data is never transmitted or stored by GearWise.</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <ul>
+            <li>Provide real-time GPS navigation and hike tracking</li>
+            <li>Deliver weather forecasts and safety alerts for your location</li>
+            <li>Identify wildlife and plants using your camera</li>
+            <li>Personalize safety recommendations based on your health profile</li>
+            <li>Enable fall detection and emergency contact alerts</li>
+            <li>Provide voice-powered trail assistance</li>
+            <li>Enable group hike tracking when you choose to share your location with a guide or travel buddy</li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>We do not sell your personal data. Your information may be shared in the following limited circumstances:</p>
+        <ul>
+            <li><strong>Emergency Situations:</strong> Your location and health data may be shared with designated emergency contacts, travel buddies, or hike guides when you enable these features or in the event of a detected fall.</li>
+            <li><strong>Third-Party Services:</strong> We use Open-Meteo for weather data (no personal data is sent, only coordinates). Wildlife and plant identification may use image processing services.</li>
+            <li><strong>Affiliate Links:</strong> The app contains links to third-party retailers (such as Amazon) for hiking gear. Clicking these links takes you to external sites governed by their own privacy policies.</li>
+        </ul>
+
+        <h2>Data Storage and Security</h2>
+        <p>Your data is primarily stored locally on your device. Health data is protected by biometric authentication. We use industry-standard security measures to protect any data that is transmitted.</p>
+
+        <h2>Your Choices</h2>
+        <ul>
+            <li>You can deny or revoke any permission (location, camera, contacts, health, microphone) through your device settings at any time.</li>
+            <li>Location sharing with guides or travel buddies is opt-in and can be disabled at any time.</li>
+            <li>Health data integration is optional and requires your explicit consent.</li>
+            <li>You can delete your local data by uninstalling the app.</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>GearWise is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2>International Users</h2>
+        <p>GearWise supports 21 languages and is available worldwide. By using the app, you consent to the processing of your information as described in this policy.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last updated" date at the top of this policy.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <p>Email: <a href="mailto:gearwisecontactus@gmail.com">gearwisecontactus@gmail.com</a></p>
+    </div>
+
+    <!-- ── Footer ── -->
+    <div class="footer">
+        <p>&copy; 2026 GearWise by Daniel Goldsmith. All rights reserved.</p>
+        <p style="margin-top: 8px;"><a href="index.html">Home</a></p>
+    </div>
+
+</body>
+</html>
